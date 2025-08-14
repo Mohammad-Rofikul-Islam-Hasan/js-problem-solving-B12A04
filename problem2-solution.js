@@ -1,12 +1,3 @@
-function totalFine(fare) {
-  if (typeof fare !== "number" || fare <= 0) {
-    return "Invalid";
-  }
-
-  const fine = fare + (fare * 20) / 100 + 30;
-  return fine;
-}
-
 function onlyCharacter(str) {
   if (typeof str !== "string") {
     return "Invalid";
@@ -15,3 +6,4 @@ function onlyCharacter(str) {
   return result;
 }
 
+console.log(onlyCharacter("Serv er : : Do wn"));
