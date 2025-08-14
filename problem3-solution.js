@@ -1,20 +1,3 @@
-function totalFine(fare) {
-  if (typeof fare !== "number" || fare <= 0) {
-    return "Invalid";
-  }
-
-  const fine = fare + (fare * 20) / 100 + 30;
-  return fine;
-}
-
-function onlyCharacter(str) {
-  if (typeof str !== "string") {
-    return "Invalid";
-  }
-  const result = str.toLocaleUpperCase().split(" ").join("");
-  return result;
-}
-
 function bestTeam(player1, player2) {
   if (typeof player1 && typeof player2 !== "object") {
     return "Invalid";
@@ -31,3 +14,7 @@ function bestTeam(player1, player2) {
     return "Tie";
   }
 }
+
+console.log(
+  bestTeam({ name: "Germany", foul: 10, cardY: 1, cardR: 1 }, "France")
+);
