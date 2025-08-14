@@ -7,3 +7,4 @@ function totalFine(fare) {
   return fine;
 }
 
+console.log(totalFine(100));
