@@ -1,5 +1,5 @@
 function bestTeam(player1, player2) {
-  if (typeof player1 && typeof player2 !== "object") {
+  if (typeof player1 !== "object" || typeof player2 !== "object") {
     return "Invalid";
   }
 

@@ -2,7 +2,9 @@ function resultReport(marks) {
   if (!Array.isArray(marks)) {
     return "Invalid";
   }
-
+  if (marks.length === 0) {
+    return { finalScore: 0, pass: 0, fail: 0 };
+  }
   let averageMark = 0;
   let passSubject = 0;
   let failSubject = 0;
@@ -24,4 +26,4 @@ function resultReport(marks) {
   return output;
 }
 
-console.log(resultReport(100));
+console.log(resultReport([98, 87, 67, 91, 92, 33, 87]));

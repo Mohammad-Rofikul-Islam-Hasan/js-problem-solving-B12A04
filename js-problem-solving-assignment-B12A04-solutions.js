@@ -11,12 +11,12 @@ function onlyCharacter(str) {
   if (typeof str !== "string") {
     return "Invalid";
   }
-  const result = str.toLocaleUpperCase().split(" ").join("");
+  const result = str.toUpperCase().split(" ").join("");
   return result;
 }
 
 function bestTeam(player1, player2) {
-  if (typeof player1 && typeof player2 !== "object") {
+  if (typeof player1 !== "object" || typeof player2 !== "object") {
     return "Invalid";
   }
 
@@ -51,6 +51,9 @@ function isSame(arr1, arr2) {
 function resultReport(marks) {
   if (!Array.isArray(marks)) {
     return "Invalid";
+  }
+  if (marks.length === 0) {
+    return { finalScore: 0, pass: 0, fail: 0 };
   }
 
   let averageMark = 0;
